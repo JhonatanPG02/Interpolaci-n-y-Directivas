@@ -1,0 +1,16 @@
+.container {
+  margin: 2rem;
+  width: 40%;
+}
+
+.alumno {
+  width: 50%;
+}
+
+.nota {
+  width: 10%;
+}
+
+.estado {
+  width: 20%;
+}

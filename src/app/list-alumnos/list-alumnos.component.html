@@ -1,0 +1,28 @@
+
+<div class="container">
+  <h4>LISTA DE ALUMNOS - CURSO ANGULAR</h4>
+  <ul class="list-group">
+    <li
+    *ngFor=" let alumno of alumnos"
+    class="list-group-item d-flex justify-content-between align-items-center"
+    >
+      <div class="alumno">
+        <span>{{alumno.nombre | pipeMayuscula}} {{alumno.apellidos | pipeMayuscula}}</span>
+      </div>
+      <div class="nota">
+        <span class="badge rounded-pill justify-content-center"
+            [ngClass]="alumno.nota > 10 ? 'bg-success': 'bg-danger' "
+        >{{alumno.nota}}
+        </span>
+      </div>
+      <div class="estado">
+        <span *ngIf="alumno.aprobado" class="text-success">
+          Aprobado
+        </span>
+        <span *ngIf="!alumno.aprobado" class="text-danger">
+          Desaprobado
+        </span>
+      </div>
+    </li>
+  </ul>
+</div>
